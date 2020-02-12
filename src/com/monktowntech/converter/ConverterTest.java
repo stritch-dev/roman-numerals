@@ -23,31 +23,43 @@ class ConverterTest {
 
   @Test
   void convert_1_to_I(){
-    String result = Converter.convert("1");
+    String result = Converter.convert(1);
     assertEquals("I", result);
   }
 
   @Test
   void convert_3_to_III(){
-    String result = Converter.convert("3");
+    String result = Converter.convert(3);
     assertEquals("III", result);
   }
 
   @Test
+  void convert_4_to_IV(){
+    String result = Converter.convert(4);
+    assertEquals("IV", result);
+
+  }
+  @Test
+  void convert_5_to_V(){
+    String result = Converter.convert(5);
+    assertEquals("V", result);
+  }
+
+  @Test
   void convert_9_to_IX(){
-    String result = Converter.convert("9");
+    String result = Converter.convert(9);
     assertEquals("IX", result);
   }
 
   @Test
   void convert_1066_to_MLXVI(){
-    String result = Converter.convert("1066");
+    String result = Converter.convert(1066);
     assertEquals("MLXVI", result);
   }
 
   @Test
   void convert_1989_to_MCMLXXXIX() {
-    String result = Converter.convert("1989");
+    String result = Converter.convert(1989);
     assertEquals("MCMLXXXIX", result);
   }
 }

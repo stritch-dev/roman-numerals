@@ -20,20 +20,24 @@ public class Converter {
 
     /**
      * This function uses the '+' operator. For rational see implementation note at https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html
+     *
      * @param numberToConvert
      * @return
      */
-    public static String convert(String numberToConvert) {
-        int number = Integer.parseInt(numberToConvert);
-        String numeral = "";
-        if (number == 1) {
-            return I;
+    public static String convert(final int numberToConvert) {
+        String romanNumeral = "";
+        if (numberToConvert > _V) {
+            throw new UnsupportedOperationException("Not implemented for >5");
+        } else if (numberToConvert == _V - 1) {
+            romanNumeral = I + V;
+        } else if (numberToConvert == _V) {
+            romanNumeral = V;
         } else {
-            for (int i = 0; i < number; i++) {
-                numeral += I;
-
+            for (int i = 0; i < numberToConvert; i++) {
+                romanNumeral += I;
             }
-            return numeral;
         }
+
+        return romanNumeral;
     }
 }
