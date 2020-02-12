@@ -1,12 +1,6 @@
 package com.monktowntech.converter;
 
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-
-import java.util.Collections;
-import java.util.Map;
-
-import static java.util.Map.entry;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ConverterTest {
@@ -33,24 +27,27 @@ class ConverterTest {
     assertEquals("I", result);
   }
 
-
   @Test
   void convert_3_to_III(){
-    fail();
+    String result = Converter.convert("3");
+    assertEquals("III", result);
   }
 
   @Test
   void convert_9_to_IX(){
-    fail();
+    String result = Converter.convert("9");
+    assertEquals("IX", result);
   }
 
   @Test
   void convert_1066_to_MLXVI(){
-    fail();
+    String result = Converter.convert("1066");
+    assertEquals("MLXVI", result);
   }
 
   @Test
-  void convert_1989_to_MCMLXXXIX(){
-    fail();
+  void convert_1989_to_MCMLXXXIX() {
+    String result = Converter.convert("1989");
+    assertEquals("MCMLXXXIX", result);
   }
 }
